@@ -31,8 +31,10 @@
     <application >
         <activity
             android:name=".TestActivity"
-            android:exported="true" />
-        <activity android:name=".Test2Activity" />
+            android:exported="true"
+            android:theme="@style/Theme.GxyOwner"/>
+        <activity android:name=".Test2Activity"
+            android:theme="@style/Theme.GxyOwner"/>
     </application>
 
 </manifest>

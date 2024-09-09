@@ -45,4 +45,5 @@ dependencies {
     implementation 'jp.wasabeef:glide-transformations:4.2.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.10'
     implementation 'com.github.zyxcoder:MvvmBuild:2.0.2'
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
 }

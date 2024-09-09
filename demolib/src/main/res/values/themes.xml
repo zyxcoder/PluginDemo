@@ -13,4 +13,8 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.GxyOwner" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 锁定布局在发生以下改变时，不重置状态 -->
+        <item name="android:configChanges">orientation|keyboardHidden|screenSize</item>
+    </style>
 </resources>

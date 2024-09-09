@@ -3,17 +3,20 @@ package com.gxy.demolib
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import com.gxy.demolib.base.BaseViewBindActivity
 import com.gxy.demolib.databinding.ActivityTest2Binding
-import com.zyxcoder.mvvmroot.base.activity.BaseVmVbActivity
 import com.zyxcoder.mvvmroot.ext.onContinuousClick
 
-class Test2Activity : BaseVmVbActivity<ActivityViewModel, ActivityTest2Binding>() {
+class Test2Activity : BaseViewBindActivity<ActivityViewModel, ActivityTest2Binding>() {
 
 
     companion object {
         fun startActivity(context: Context) {
             context.startActivity(Intent(context, Test2Activity::class.java))
         }
+    }
+
+    override fun init(savedInstanceState: Bundle?) {
     }
 
     override fun createObserver() {

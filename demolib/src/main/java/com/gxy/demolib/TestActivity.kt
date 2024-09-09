@@ -3,12 +3,17 @@ package com.gxy.demolib
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import com.gxy.demolib.adapter.ListAdapter
 import com.gxy.demolib.databinding.ActivityTestBinding
+import com.gxy.demolib.entity.ItemData
 import com.zyxcoder.mvvmroot.base.activity.BaseVmVbActivity
 import com.zyxcoder.mvvmroot.ext.onContinuousClick
 import com.zyxcoder.mvvmroot.ext.showToast
+import com.zyxcoder.mvvmroot.utils.loadImage
 
 class TestActivity : BaseVmVbActivity<ActivityViewModel, ActivityTestBinding>() {
+
+    private lateinit var adapter: ListAdapter
 
     companion object {
         fun startActivity(context: Context) {
@@ -28,6 +33,11 @@ class TestActivity : BaseVmVbActivity<ActivityViewModel, ActivityTestBinding>() 
     }
 
     override fun initData() {
+        val list = mutableListOf<ItemData>()
+        repeat(20) {
+            list.add(ItemData("scsqwdqdqwdwqdqwdqa" + it))
+        }
+        adapter.setNewInstance(list)
     }
 
     override fun initView(savedInstanceState: Bundle?) {
@@ -36,6 +46,10 @@ class TestActivity : BaseVmVbActivity<ActivityViewModel, ActivityTestBinding>() 
             btJump.onContinuousClick {
                 Test2Activity.startActivity(context = this@TestActivity)
             }
+            adapter = ListAdapter().apply {
+                rvInfo.adapter = this
+            }
+            ivLogo.loadImage("https://gntbiz.guangxingyun.com/ImageData/id_card/20220630/1_1656556786872.jpg")
         }
     }
 

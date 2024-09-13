@@ -3,7 +3,7 @@ package com.gxy.demolib
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.gxy.demolib.base.BaseViewBindActivity
+import com.gxy.common.base.BaseViewBindActivity
 import com.gxy.demolib.databinding.ActivityTest2Binding
 import com.zyxcoder.mvvmroot.ext.onContinuousClick
 

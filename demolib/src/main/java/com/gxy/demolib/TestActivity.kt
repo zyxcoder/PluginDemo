@@ -3,8 +3,8 @@ package com.gxy.demolib
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import com.gxy.common.base.BaseViewBindActivity
 import com.gxy.demolib.adapter.ListAdapter
-import com.gxy.demolib.base.BaseViewBindActivity
 import com.gxy.demolib.databinding.ActivityTestBinding
 import com.gxy.demolib.entity.ItemData
 import com.zyxcoder.mvvmroot.ext.onContinuousClick
